@@ -58,3 +58,14 @@ Date:   Thu Nov 14 09:23:55 2013 -0600
 
 :100644 100644 ff0746a9f0ac02303bd87ed7c3d1571776cbf28d ac23d6bb695e1563edbd3a3fcc0079e1be1793ae M      squares.py
 ```
+
+### Automatic Bisection
+
+This example can be further condensed via `git bisect run`:
+
+```bash
+$ git bisect start
+$ git bisect good master
+$ git bisect bad buggy
+$ git bisect run python squares.py 2
+```
